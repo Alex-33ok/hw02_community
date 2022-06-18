@@ -27,11 +27,3 @@ class Post(models.Model):
         null=True,
         on_delete=models.CASCADE
     )
-
-#class Event(models.Model):
-    #name = models.CharField(max_length=200)
-    #start_at = models.DateTimeField()
-    #description = models.TextField()
-    #contact=models.EmailField(max_length=200)
-    #author=models.ForeignKey(User, on_delete=models.CASCADE)
-    #location= models.CharField(max_length=400)

@@ -1,8 +1,8 @@
-from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
-from django.template import loader
 from .models import Post, Group
-LIMIT_OF_POSTS=10
+
+LIMIT_OF_POSTS = 10
+
 
 # Главная страница
 def index(request):
@@ -11,6 +11,7 @@ def index(request):
         'posts': posts,
     }
     return render(request, 'posts/index.html', context)
+
 
 def group_posts(request, slug):
     pass
@@ -21,4 +22,3 @@ def group_posts(request, slug):
         'group': group,
     }
     return render(request, 'posts/group_list.html', context)
-

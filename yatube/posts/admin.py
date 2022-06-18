@@ -1,8 +1,8 @@
 from django.contrib import admin
 from .models import Post, Group
 
-class PostAdmin(admin.ModelAdmin):
 
+class PostAdmin(admin.ModelAdmin):
     list_display = ('text', 'pub_date', 'author', 'group', 'pk')
     search_fields = ('text',)
     list_filter = ('pub_date',)
