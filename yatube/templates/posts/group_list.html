@@ -1,11 +1,11 @@
 <!-- templates/posts/group_list.html -->
 {% extends 'base.html' %}
 {% block title %}
-    Записи сообщества {{ group }}
+    Записи сообщества {{ group.name }}
 {% endblock %}
 
 {% block content %}
-    <h1>{{ group }}</h1>
+    <h1>{{ group.name }}</h1>
     <h2>{{ group.description }}</h2>
     <article>
         {% for post in posts %}
