@@ -40,6 +40,7 @@ LOGIN_REDIRECT_URL = 'posts:index'
 INSTALLED_APPS = [
 
     'users.apps.UsersConfig',
+    'about.apps.AboutConfig',
     'django.contrib.admin',
     'core.apps.CoreConfig',
     'posts.apps.PostsConfig',
@@ -73,6 +74,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'core.context_processors.year.year',
             ],
         },
     },

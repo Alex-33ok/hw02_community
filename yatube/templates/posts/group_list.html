@@ -7,11 +7,10 @@
 {% block content %}
     <h1>{{ group.name }}</h1>
     <h2>{{ group.description }}</h2>
-    <article>
-        {% for post in posts %}
-            {% include 'includes/post.html' %}
-            {% if not forloop.last %}
-                <hr>{% endif %}
-        {% endfor %}
-    </article>
+    {% for post in page_obj %}
+        {% include 'includes/post.html' %}
+        {% if not forloop.last %}
+            <hr>{% endif %}
+    {% endfor %}
+    {% include 'includes/paginator.html' %}
 {% endblock %}
